@@ -1,10 +1,8 @@
 import './globals.scss';
-import { Noto_Sans_KR } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const noto = Noto_Sans_KR( {weight: ['400', '700'], variable: '--font-noto',});
 
 
 export const metadata: Metadata = {
@@ -19,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="scroll-smooth">
-       <body className={`${inter.className} ${noto.className} font-sans`}>
+       <body className={`${inter.className}`}>
         {children}
       </body>
     </html>

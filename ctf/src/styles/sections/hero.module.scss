@@ -57,7 +57,7 @@ $accent-hover: #2563eb;
   display: inline-block;
   background-color: rgba($accent-primary, 0.1);
   color: $accent-primary;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
@@ -67,7 +67,7 @@ $accent-hover: #2563eb;
 
 .title {
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: $dark-text-primary;
