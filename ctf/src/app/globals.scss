@@ -1,0 +1,315 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 변수 */
+$dark-bg-primary: #0f172a;
+$dark-bg-secondary: #1e293b;
+$dark-text-primary: #f8fafc;
+$dark-text-secondary: #cbd5e1;
+$accent-primary: #3b82f6;
+$accent-secondary: #60a5fa;
+$accent-hover: #2563eb;
+$success-color: #10b981;
+$warning-color: #f59e0b;
+$danger-color: #ef4444;
+
+/* 리셋 및 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; // 헤더 높이만큼 패딩
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: $dark-bg-primary;
+  color: $dark-text-primary;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: $accent-primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $accent-secondary;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+button, .button {
+  display: inline-block;
+  background-color: $accent-primary;
+  color: $dark-text-primary;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  &:hover {
+    background-color: $accent-hover;
+    transform: translateY(-2px);
+  }
+  
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid $accent-primary;
+    color: $accent-primary;
+    
+    &:hover {
+      background-color: rgba($accent-primary, 0.1);
+    }
+  }
+  
+  &.lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* 섹션 공통 스타일 */
+.section {
+  padding: 6rem 1.5rem;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 1.5rem;
+  }
+  
+  &:nth-child(even) {
+    background-color: $dark-bg-secondary;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $accent-primary;
+        border-radius: 0.125rem;
+      }
+    }
+    
+    .section-subtitle {
+      color: $dark-text-secondary;
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* 그리드 시스템 */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+  
+  .col {
+    padding: 1rem;
+    flex: 1;
+    
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+    }
+  }
+  
+  .col-1 { flex: 0 0 8.333333%; }
+  .col-2 { flex: 0 0 16.666667%; }
+  .col-3 { flex: 0 0 25%; }
+  .col-4 { flex: 0 0 33.333333%; }
+  .col-5 { flex: 0 0 41.666667%; }
+  .col-6 { flex: 0 0 50%; }
+  .col-7 { flex: 0 0 58.333333%; }
+  .col-8 { flex: 0 0 66.666667%; }
+  .col-9 { flex: 0 0 75%; }
+  .col-10 { flex: 0 0 83.333333%; }
+  .col-11 { flex: 0 0 91.666667%; }
+  .col-12 { flex: 0 0 100%; }
+  
+  @media (max-width: 768px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+    .col-7, .col-8, .col-9, .col-10, .col-11 {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+/* 카드 스타일 */
+.card {
+  background-color: rgba($dark-bg-secondary, 0.5);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-body {
+    color: $dark-text-secondary;
+  }
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* 유틸리티 클래스 */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.text-primary { color: $dark-text-primary; }
+.text-secondary { color: $dark-text-secondary; }
+.text-accent { color: $accent-primary; }
+.text-success { color: $success-color; }
+.text-warning { color: $warning-color; }
+.text-danger { color: $danger-color; }
+
+.bg-primary { background-color: $dark-bg-primary; }
+.bg-secondary { background-color: $dark-bg-secondary; }
+.bg-accent { background-color: $accent-primary; }
+
+/* 특별 효과 */
+.glass {
+  background: rgba($dark-bg-secondary, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, $accent-primary, $accent-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, $dark-text-secondary, transparent);
+  margin: 2rem 0;
+}
+
+/* 사용자 정의 스크롤바 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $dark-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $accent-primary;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $accent-hover;
+}

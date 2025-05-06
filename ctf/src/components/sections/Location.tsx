@@ -1,0 +1,190 @@
+'use client';
+
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { 
+  FaMapMarkerAlt, 
+  FaDirections, 
+  FaBus, 
+  FaSubway, 
+  FaTrain, 
+  FaCar,
+  FaExternalLinkAlt
+} from 'react-icons/fa';
+import styles from '@/styles/sections/location.module.scss';
+
+export default function Location() {
+  // 애니메이션을 위한 InView Hook
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
+  // 애니메이션 변수
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6 } 
+    }
+  };
+  
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { duration: 0.6 } 
+    }
+  };
+  
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { duration: 0.6 } 
+    }
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  return (
+    <section id="location" className={styles.location}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <motion.h2 
+            className={styles.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+            ref={ref}
+          >
+            오시는 길
+          </motion.h2>
+          <motion.p 
+            className={styles.subtitle}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            강원대학교 중앙도서관 4층 데이터라이브러리에서 열리는 행사에 참여하기 위한 교통 안내입니다.
+          </motion.p>
+        </div>
+        
+        <div className={styles.content}>
+          <motion.div 
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className={styles.info}
+          >
+            <motion.h3 variants={fadeInLeft} className={styles.locationTitle}>
+              장소 안내
+            </motion.h3>
+            
+            <motion.div variants={fadeInLeft} className={styles.locationDetails}>
+              <h4 className={styles.locationName}>
+                강원대학교 중앙도서관 4층 데이터라이브러리
+              </h4>
+              <p className={styles.locationAddress}>
+                강원도 춘천시 강원대학길 1 중앙도서관 4층
+              </p>
+            </motion.div>
+            
+            <motion.div variants={fadeInLeft} className={styles.transportationSection}>
+              <h4 className={styles.transportTitle}>교통편 안내</h4>
+              
+              <div className={styles.transportList}>
+                <div className={styles.transportItem}>
+                  <div className={styles.transportIcon}>
+                    <FaBus />
+                  </div>
+                  <div className={styles.transportContent}>
+                    <h5 className={styles.transportName}>버스</h5>
+                    <p className={styles.transportInfo}>
+                      시내버스: 9번, 9-1번, 9-2번<br />
+                      정류장: 강원대 정문 하차 후 도보 10분
+                    </p>
+                  </div>
+                </div>
+                
+                <div className={styles.transportItem}>
+                  <div className={styles.transportIcon}>
+                    <FaTrain />
+                  </div>
+                  <div className={styles.transportContent}>
+                    <h5 className={styles.transportName}>KTX/ITX</h5>
+                    <p className={styles.transportInfo}>
+                      춘천역 하차 → 시내버스 9번, 9-1번, 9-2번<br />
+                      또는 택시 이용 (약 15분 소요)
+                    </p>
+                  </div>
+                </div>
+                
+                <div className={styles.transportItem}>
+                  <div className={styles.transportIcon}>
+                    <FaSubway />
+                  </div>
+                  <div className={styles.transportContent}>
+                    <h5 className={styles.transportName}>경춘선</h5>
+                    <p className={styles.transportInfo}>
+                      강촌역/남춘천역 하차 → 시내버스 이용<br />
+                      또는 택시 이용
+                    </p>
+                  </div>
+                </div>
+                
+                <div className={styles.transportItem}>
+                  <div className={styles.transportIcon}>
+                    <FaCar />
+                  </div>
+                  <div className={styles.transportContent}>
+                    <h5 className={styles.transportName}>자가용</h5>
+                    <p className={styles.transportInfo}>
+                      네비게이션: '강원대학교 중앙도서관' 검색<br />
+                      주차: 중앙도서관 지하주차장 이용 가능
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.a 
+              variants={fadeInLeft}
+              href="https://map.kakao.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.directionsButton}
+            >
+              길찾기 <FaExternalLinkAlt className={styles.buttonIcon} />
+            </motion.a>
+          </motion.div>
+          
+          <motion.div 
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={fadeInRight}
+            className={styles.mapContainer}
+          >
+            {/* 실제 애플리케이션에서는 여기에 지도 API(예: 카카오맵, 네이버맵)를 사용하여 지도를 표시합니다 */}
+            {/* 현재는 플레이스홀더로 대체합니다 */}
+            <div className={styles.mapPlaceholder}>
+              <FaMapMarkerAlt className={styles.icon} /> 
+              강원대학교 중앙도서관 지도가 표시될 영역
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}

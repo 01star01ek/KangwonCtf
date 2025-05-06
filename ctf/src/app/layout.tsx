@@ -1,0 +1,27 @@
+import './globals.scss';
+import { Noto_Sans_KR } from 'next/font/google';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+const noto = Noto_Sans_KR( {weight: ['400', '700'], variable: '--font-noto',});
+
+
+export const metadata: Metadata = {
+  title: '강원권 중고교 해킹교육 & CTF 대회',
+  description: '강원권 중고교생을 위한 해킹교육 및 CTF 대회 정보 안내 페이지입니다.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ko" className="scroll-smooth">
+       <body className={`${inter.className} ${noto.className} font-sans`}>
+        {children}
+      </body>
+    </html>
+  );
+}

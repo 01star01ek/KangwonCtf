@@ -1,0 +1,329 @@
+// 변수
+$dark-bg-primary: #0f172a;
+$dark-bg-secondary: #1e293b;
+$dark-text-primary: #f8fafc;
+$dark-text-secondary: #cbd5e1;
+$accent-primary: #3b82f6;
+$accent-secondary: #60a5fa;
+$accent-hover: #2563eb;
+
+.competition {
+  padding: 6rem 0;
+  background-color: $dark-bg-primary;
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($accent-primary, 0.05), transparent 70%);
+    z-index: 0;
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($accent-secondary, 0.05), transparent 70%);
+    z-index: 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $dark-text-primary;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, $accent-primary, $accent-secondary);
+      border-radius: 0.125rem;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    color: $dark-text-secondary;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoCard {
+  background-color: rgba($dark-bg-secondary, 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cardIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba($accent-primary, 0.1), rgba($accent-secondary, 0.1));
+    color: $accent-primary;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-text-primary;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 3rem;
+      height: 2px;
+      background: linear-gradient(to right, $accent-primary, $accent-secondary);
+      border-radius: 1px;
+    }
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .infoIcon {
+      color: $accent-primary;
+      margin-right: 0.75rem;
+      font-size: 1.125rem;
+      margin-top: 0.125rem;
+      min-width: 1.125rem;
+    }
+    
+    .infoContent {
+      .infoLabel {
+        font-weight: 600;
+        color: $dark-text-primary;
+        margin-bottom: 0.25rem;
+      }
+      
+      .infoText {
+        color: $dark-text-secondary;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.awardsSection {
+  margin-top: 4rem;
+  
+  .awardsSectionTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $dark-text-primary;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4rem;
+      height: 2px;
+      background: linear-gradient(to right, $accent-primary, $accent-secondary);
+      border-radius: 1px;
+    }
+  }
+}
+
+.awardsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+  
+  .awardCard {
+    background-color: rgba($dark-bg-secondary, 0.3);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      background-color: rgba($dark-bg-secondary, 0.5);
+    }
+    
+    .awardIcon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .gold {
+      color: #fbbf24;
+    }
+    
+    .silver {
+      color: #94a3b8;
+    }
+    
+    .bronze {
+      color: #b45309;
+    }
+    
+    .honorable {
+      color: #8b5cf6;
+    }
+    
+    .awardTitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $dark-text-primary;
+      margin-bottom: 0.5rem;
+    }
+    
+    .awardSubtitle {
+      color: $accent-primary;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .awardPrize {
+      color: $dark-text-secondary;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.benefitsSection {
+  margin-top: 4rem;
+  background-color: rgba($dark-bg-secondary, 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  
+  .benefitsTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-text-primary;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 3rem;
+      height: 2px;
+      background: linear-gradient(to right, $accent-primary, $accent-secondary);
+      border-radius: 1px;
+    }
+  }
+  
+  .benefitsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    
+    .benefitItem {
+      display: flex;
+      align-items: flex-start;
+      
+      .benefitIcon {
+        color: $accent-primary;
+        font-size: 1.25rem;
+        margin-right: 1rem;
+        margin-top: 0.125rem;
+      }
+      
+      .benefitText {
+        color: $dark-text-secondary;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        
+        strong {
+          color: $dark-text-primary;
+        }
+      }
+    }
+  }
+}
