@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '@/styles/components/navbar.module.scss';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 // 네비게이션 링크 정의
 const navLinks = [
@@ -13,7 +14,6 @@ const navLinks = [
   { id: 'education', name: '사전교육 안내' },
   { id: 'competition', name: '대회 안내' },
   { id: 'location', name: '오시는 길' },
-  { id: 'contact', name: '문의처' },
   { id: 'faq', name: 'FAQ' }
 ];
 
@@ -27,7 +27,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
-      
+
       // 현재 활성화된 섹션 확인
       const sections = navLinks.map(link => link.id);
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -57,20 +57,23 @@ export default function Navbar() {
   };
 
   return (
-    <header 
+    <header
       className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}
     >
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link 
-            to="hero" 
-            spy={true} 
-            smooth={true} 
-            offset={-70} 
+          <Link
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
             duration={500}
             className={styles.logoLink}
           >
-            <span className={styles.gradientText}>해킹교육 & CTF</span>
+            <span className={styles.gradientText}>
+              강원권 중고교<br />
+              해킹교육 & CTF 대회
+            </span>
           </Link>
         </div>
 
@@ -104,15 +107,16 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* 모바일 메뉴 버튼 */}
         <button
-          className={`${styles.mobileMenuBtn} ${mobileMenuOpen ? styles.open : ''}`}
+          className={styles.mobileMenuBtn}
           onClick={toggleMobileMenu}
           aria-label="메뉴 열기"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {mobileMenuOpen ? (
+            <FaTimes size={24} color="#f8fafc" />
+          ) : (
+            <FaBars size={24} color="#f8fafc" />
+          )}
         </button>
 
         {/* 모바일 메뉴 */}
@@ -127,7 +131,7 @@ export default function Navbar() {
             >
               <ul className={styles.mobileNavLinks}>
                 {navLinks.map((link) => (
-                  <motion.li 
+                  <motion.li
                     key={link.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

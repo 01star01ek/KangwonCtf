@@ -8,7 +8,6 @@ import Apply from '@/components/sections/Apply';
 import Education from '@/components/sections/Education';
 import Competition from '@/components/sections/Competition';
 import Location from '@/components/sections/Location';
-import Contact from '@/components/sections/Contact';
 import Faq from '@/components/sections/Faq';
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         <Education />
         <Competition />
         <Location />
-        <Contact />
         <Faq />
       </main>
       

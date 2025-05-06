@@ -115,32 +115,18 @@ export default function Apply() {
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    학부모 동의서 (양식 다운로드 후 작성하여 업로드)
+                    학부모 동의서 (폼 내 양식 다운로드 후 작성하여 업로드)
                   </span>
                 </li>
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    참가서약서 (양식 다운로드 후 작성하여 업로드)
+                    참가서약서 (폼 내 양식 다운로드 후 작성하여 업로드)
                   </span>
                 </li>
               </ul>
               
               <div className={styles.formControls}>
-                <a
-                  href="/forms/parent-consent.pdf" 
-                  className={`${styles.formBtn} ${styles.secondary}`}
-                  download
-                >
-                  학부모 동의서 다운로드 <FaFileDownload style={{ marginLeft: '0.5rem', display: 'inline' }} />
-                </a>
-                <a
-                  href="/forms/participant-pledge.pdf"
-                  className={`${styles.formBtn} ${styles.secondary}`}
-                  download
-                >
-                  참가서약서 다운로드 <FaFileDownload style={{ marginLeft: '0.5rem', display: 'inline' }} />
-                </a>
                 <button 
                   className={styles.formBtn}
                   onClick={() => setShowForm(true)}
@@ -160,19 +146,10 @@ export default function Apply() {
             <h3 className={styles.stepsTitle}>신청 단계</h3>
             
             <ol className={styles.stepsList}>
-              <motion.li variants={fadeIn} className={styles.step}>
-                <div className={styles.stepNumber}>1</div>
-                <div className={styles.stepContent}>
-                  <h4 className={styles.stepTitle}>서류 양식 다운로드</h4>
-                  <p className={styles.stepDescription}>
-                    필요한 서류(학부모 동의서, 참가서약서)를 다운로드하여 작성합니다.
-                    각 서류는 서명이 필요하므로 출력 후 작성하거나 디지털 서명이 가능합니다.
-                  </p>
-                </div>
-              </motion.li>
+
               
               <motion.li variants={fadeIn} className={styles.step}>
-                <div className={styles.stepNumber}>2</div>
+                <div className={styles.stepNumber}>1</div>
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>구글 폼 작성 및 제출</h4>
                   <p className={styles.stepDescription}>
@@ -183,7 +160,7 @@ export default function Apply() {
               </motion.li>
               
               <motion.li variants={fadeIn} className={styles.step}>
-                <div className={styles.stepNumber}>3</div>
+                <div className={styles.stepNumber}>2</div>
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>신청 확인 메일 확인</h4>
                   <p className={styles.stepDescription}>
@@ -194,7 +171,7 @@ export default function Apply() {
               </motion.li>
               
               <motion.li variants={fadeIn} className={styles.step}>
-                <div className={styles.stepNumber}>4</div>
+                <div className={styles.stepNumber}>3</div>
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>참가자 선발 결과 확인</h4>
                   <p className={styles.stepDescription}>

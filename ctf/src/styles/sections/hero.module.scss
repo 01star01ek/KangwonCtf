@@ -43,13 +43,14 @@ $accent-hover: #2563eb;
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   position: relative;
   z-index: 2;
 }
 
 .content {
   max-width: 650px;
+  margin-left: 0; 
 }
 
 .subtitle {
