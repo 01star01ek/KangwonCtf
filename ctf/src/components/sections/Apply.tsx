@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaChevronRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaChevronRight } from 'react-icons/fa';
 import { IoMdClose } from 'react-icons/io';
 import styles from '@/styles/sections/apply.module.scss';
 
@@ -84,7 +84,7 @@ export default function Apply() {
               <div className={styles.period}>
                 <FaClipboardList className={styles.icon} />
                 <span className={styles.text}>
-                  <strong>신청 방법:</strong> 아래의 '신청하기' 버튼을 클릭하여 구글 폼 작성
+                  <strong>신청 방법:</strong> 아래의 &#39;신청하기&#39; 버튼을 클릭하여 구글 폼 작성
                 </span>
               </div>
               
@@ -153,7 +153,7 @@ export default function Apply() {
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>구글 폼 작성 및 제출</h4>
                   <p className={styles.stepDescription}>
-                    '신청하기' 버튼을 클릭하여 구글 폼을 작성합니다. 기본 정보 입력 및 
+                  &#39;신청하기&#39; 버튼을 클릭하여 구글 폼을 작성합니다. 기본 정보 입력 및 
                     작성한 서류를 업로드하세요. 모든 정보는 정확하게 기재해 주시기 바랍니다.
                   </p>
                 </div>

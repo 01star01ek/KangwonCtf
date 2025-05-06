@@ -3,8 +3,7 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { 
-  FaMapMarkerAlt, 
-  FaDirections, 
+  FaMapMarkerAlt,  
   FaBus, 
   FaSubway, 
   FaTrain, 
@@ -20,15 +19,6 @@ export default function Location() {
     threshold: 0.1,
   });
   
-  // 애니메이션 변수
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6 } 
-    }
-  };
   
   const fadeInLeft = {
     hidden: { opacity: 0, x: -50 },
@@ -151,7 +141,7 @@ export default function Location() {
                   <div className={styles.transportContent}>
                     <h5 className={styles.transportName}>자가용</h5>
                     <p className={styles.transportInfo}>
-                      네비게이션: '강원대학교 중앙도서관' 검색<br />
+                      네비게이션: &#39;강원대학교 중앙도서관&#39; 검색<br />
                       주차: 중앙도서관 지하주차장 이용 가능
                     </p>
                   </div>

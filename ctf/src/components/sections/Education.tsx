@@ -5,18 +5,10 @@ import { motion } from 'framer-motion';
 import { 
   FaLaptopCode, 
   FaUserGraduate, 
-  FaCalendarAlt, 
-  FaClock, 
-  FaMapMarkerAlt, 
-  FaUsers,
   FaBrain,
   FaGlobe,
   FaLock,
-  FaServer,
-  FaLaptop,
-  FaIdCard,
-  FaBookOpen,
-  FaUtensils
+  FaServer
 } from 'react-icons/fa';
 import styles from '@/styles/sections/education.module.scss';
 

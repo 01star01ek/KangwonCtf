@@ -1,6 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaUsers, FaTrophy, FaUniversity } from 'react-icons/fa';
@@ -14,15 +13,6 @@ export default function About() {
   });
   
   // 애니메이션 변수
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6 } 
-    }
-  };
-  
   const fadeInLeft = {
     hidden: { opacity: 0, x: -50 },
     visible: { 

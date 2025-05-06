@@ -1,6 +1,5 @@
 'use client';
 
-import { Link } from 'react-scroll';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 import styles from '@/styles/components/footer.module.scss';
 
