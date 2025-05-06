@@ -9,8 +9,6 @@ import {
   FaLaptopCode,
   FaTrophy,
   FaMedal,
-  FaAward,
-  FaStar,
   FaGraduationCap,
   FaCertificate,
   FaNetworkWired,
