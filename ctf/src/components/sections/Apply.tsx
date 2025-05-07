@@ -59,8 +59,7 @@ export default function Apply() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            강원권 중고교 해킹교육 & CTF 대회 참가 신청 방법을 안내해 드립니다.
-            제한된 인원으로 진행되는 만큼 참가 신청 후 선발 과정이 있습니다.
+            강원권 중고교 해킹교육 & CTF 대회 참가 신청 방법을 안내 드립니다.
           </motion.p>
         </div>
         

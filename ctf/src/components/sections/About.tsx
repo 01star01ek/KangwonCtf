@@ -60,7 +60,7 @@ export default function About() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            강원권 중고교 해킹교육 & CTF 대회는 미래의 화이트 해커 양성을 위한 교육 프로그램으로,
+            강원권 중고교 해킹교육 & CTF 대회는 미래의 화이트 해커 양성을 위한 교육 프로그램으로,<br/>
             중고등학생들에게 사이버 보안의 중요성을 알리고 관련 역량을 기르는 기회를 제공합니다.
           </motion.p>
         </div>
@@ -97,7 +97,7 @@ export default function About() {
                 <FaTrophy className={styles.featureIcon} />
                 <h4 className={styles.featureTitle}>시상 내역</h4>
                 <p className={styles.featureText}>
-                  대상, 금상, 은상, 동상 등 다양한 상장과 상품이 수여되며, 강원정보보호컨퍼런스 초청 특전
+                  대상, 금상, 은상, 동상 등 다양한 상장과 상품이 수여
                 </p>
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export default function About() {
               <div className={styles.detailContent}>
                 <h4 className={styles.detailTitle}>추가 특전</h4>
                 <p className={styles.detailText}>
-                  수상자 전원 강원정보보호컨퍼런스 초청 및 참가자 전원 참가 증명서가 발급됩니다. 
+                  최우수 수상자팀 이상 강원정보보호컨퍼런스 초청 및 참가자 전원 참가 증명서가 발급됩니다. 
                   또한 우수 참가자에게는 향후 관련 프로그램 참여 기회가 우선적으로 제공됩니다.
                 </p>
               </div>

@@ -202,12 +202,6 @@ export default function Education() {
                 <strong>필기구</strong> - 필기가 필요한 경우를 대비해 준비하세요.
               </span>
             </li>
-            <li className={styles.materialsItem}>
-              <span className={styles.bullet}>•</span>
-              <span className={styles.text}>
-                <strong>개인 식사</strong> - 오프라인 교육 시 점심 식사는 개인적으로 준비해야 합니다.
-              </span>
-            </li>
           </motion.ul>
           
           <motion.div variants={fadeIn} className={styles.materialsNote}>

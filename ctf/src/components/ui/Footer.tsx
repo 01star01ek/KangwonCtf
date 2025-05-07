@@ -12,7 +12,7 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerInfo}>
             <h3>문의</h3>
-            <p>강원대학교</p>
+            <p>강원대학교 사이버융합학과</p>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <FaPhone className={styles.icon} />
@@ -32,21 +32,17 @@ export default function Footer() {
 
           <div className={styles.footerInfo}>
             <h3>주최</h3>
-            <p>빅데이터-융합보안사업단</p>
-            <div className={styles.contactInfo}>
-              <div className={styles.contactItem}>
-                <span>
-                  본 대회는 강원대학교 빅데이터-융합보안사업단에서 주최하는 행사로,<br />
-                  중고교생들의 정보보안 역량 강화와 미래 화이트 해커 육성을 목표로 합니다.
-                </span>
-              </div>
-            </div>
+            <p>강원대학교 사이버융합학과</p>
+            <h3>주관</h3>
+            <p>강원대학교 빅데이터-융합보안사업단(정보보호특성화대학지원사업)</p>
+            <h3>후원</h3>
+            <p>강원도청, 강원도교육청, 국가정보원 강원지부, 한국인터넷진흥워 강원지부</p>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            &copy; {currentYear} 강원대학교 빅데이터-융합보안사업단
+            &copy; {currentYear} 2025 강원권 중.고교 해킹 교육 & CTF 대회
           </div>
 
           <div className={styles.socialLinks}>

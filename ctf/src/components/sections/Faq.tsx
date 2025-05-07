@@ -127,27 +127,7 @@ export default function Faq() {
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
-          className={styles.moreQuestions}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <p className={styles.text}>
-            더 궁금한 점이 있으신가요?
-          </p>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={800}
-            className={styles.contactButton}
-          >
-            <FaEnvelope className={styles.buttonIcon} /> 문의하기
-          </Link>
-        </motion.div>
+     
       </div>
     </section>
   );

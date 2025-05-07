@@ -215,7 +215,7 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.benefitItem}>
               <FaGraduationCap className={styles.benefitIcon} />
               <p className={styles.benefitText}>
-                <strong>강원정보보호컨퍼런스 초청</strong> - 수상자 전원에게는 
+                <strong>강원정보보호컨퍼런스 초청</strong> - 최우상 이상으로 수상한 팀에는 
                 강원정보보호컨퍼런스에 참석할 수 있는 기회가 제공됩니다.
               </p>
             </motion.div>
@@ -231,8 +231,8 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.benefitItem}>
               <FaNetworkWired className={styles.benefitIcon} />
               <p className={styles.benefitText}>
-                <strong>멘토링 기회</strong> - 우수 참가자에게는 
-                이후 관련 분야 전문가와의 멘토링 기회가 제공됩니다.
+                <strong>멘토링 기회</strong> - 교육 참가자에게는 
+                관련 분야 전문가와의 멘토링 할 수 있는 기회입니다.
               </p>
             </motion.div>
             
