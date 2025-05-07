@@ -103,7 +103,7 @@ export default function Location() {
                     <h5 className={styles.transportName}>시외/고속 버스</h5>
                     <p className={styles.transportInfo}>
                       - 춘천버스터미널 → 강원대<br/> (택시 약 10분, 버스 약 20분)<br/>
-                      * 버스정류장[2058] : 하차하여 도보 이동(터미널 맞은편), 300번 버스 탑승 후 ‘강원대중앙도서관‘ 하차<br/>
+                      * 버스정류장[2058] : 하차하여 도보 이동(터미널 맞은편), 300번 버스 탑승 후 강원대중앙도서관 하차<br/>
                       - 중앙도서관 4층 데이터라이브러리 도착
 
                     </p>
@@ -119,7 +119,7 @@ export default function Location() {
                     <p className={styles.transportInfo}>
                       - 남춘천역 → 강원대학교 <br/>
                       (택시 약 10분, 버스 약 20분)<br/>
-                      * 버스정류장[2295] : 300번 버스 탑승 후 '강원대중앙도서관‘ 하차<br/>
+                      * 버스정류장[2295] : 300번 버스 탑승 후 강원대중앙도서관 하차<br/>
                       - 중앙도서관 4층 데이터라이브러리 도착
 
                     </p>
@@ -148,7 +148,7 @@ export default function Location() {
                     <h5 className={styles.transportName}>자가용</h5>
                     <p className={styles.transportInfo}>
                       네비게이션: &#39;강원대학교 중앙도서관&#39; 검색<br />
-                      주차: 중앙도서관 지하주차장 이용 가능
+                      주차: 강원대학교 주차장 이용 가능 
                     </p>
                   </div>
                 </div>

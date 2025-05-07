@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FaEnvelope } from 'react-icons/fa';
-import { Link } from 'react-scroll';
 import styles from '@/styles/sections/faq.module.scss';
 
 // FAQ 데이터
