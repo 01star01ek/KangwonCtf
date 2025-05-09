@@ -12,7 +12,8 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerInfo}>
             <h3>문의</h3>
-            <p>강원대학교 사이버융합학과</p>
+            <p>강원대학교 강원권 중고교 해킹교육&CTF대회 담당자
+            </p>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <FaPhone className={styles.icon} />
@@ -24,7 +25,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.icon} />
-                <span>강원대학교 중앙도서관 4층 데이터라이브러리</span>
+                <span>강원대학길 1, 공학6호관 604호&apos;빅데이터-융합보안사업단&apos;</span>
               </div>
             </div>
           </div>
@@ -32,11 +33,10 @@ export default function Footer() {
 
           <div className={styles.footerInfo}>
             <h3>주최</h3>
-            <p>강원대학교 사이버융합학과</p>
+            <p>강원대학교, 강원특별자치도청, 한국인터넷진흥원, 강원정보보호지원센터
+            </p>
             <h3>주관</h3>
-            <p>강원대학교 빅데이터-융합보안사업단(정보보호특성화대학지원사업)</p>
-            <h3>후원</h3>
-            <p>강원도청, 강원도교육청, 국가정보원 강원지부, 한국인터넷진흥워 강원지부</p>
+            <p>본 행사는 강원대학교, 강원특별자치도청, 한국인터넷진흥원, 강원정보보호지원센터가 공동 주최하는 행사로, 강원도내 중고교 생들의 정보보안 역량 강화 및 미래인재 발굴을 목표로 합니다.</p>
           </div>
         </div>
 
@@ -45,32 +45,6 @@ export default function Footer() {
             &copy; {currentYear} 2025 강원권 중.고교 해킹 교육 & CTF 대회
           </div>
 
-          <div className={styles.socialLinks}>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcon}
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcon}
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcon}
-            >
-              <FaYoutube />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
