@@ -93,29 +93,7 @@ export default function Education() {
           animate={inView ? "visible" : "hidden"}
           variants={staggerContainer}
         >
-          <motion.div variants={fadeIn} className={styles.educationCard}>
-            <div className={styles.cardIcon}>
-              <FaLaptopCode />
-            </div>
-            <h3 className={styles.cardTitle}>온라인 교육</h3>
-            
-            <div className={styles.infoItem}>
-              <div className={styles.infoLabel}>기간</div>
-              <div className={styles.infoText}>2025년 7월 1일 ~ 7월 31일</div>
-            </div>
-            
-            <div className={styles.infoItem}>
-              <div className={styles.infoLabel}>방식</div>
-              <div className={styles.infoText}>온라인 플랫폼을 통한 자율 학습</div>
-            </div>
-            
-            <p className={styles.cardDescription}>
-              사전 제작된 동영상 강의 및 온라인 실습 자료를 제공합니다. 
-              참가자는 자신의 일정에 맞춰 학습할 수 있으며, 
-              온라인 플랫폼을 통해 질의응답이 가능합니다.
-            </p>
-          </motion.div>
-          
+
           <motion.div variants={fadeIn} className={styles.educationCard}>
             <div className={styles.cardIcon}>
               <FaUserGraduate />
@@ -131,15 +109,40 @@ export default function Education() {
               <div className={styles.infoLabel}>장소</div>
               <div className={styles.infoText}>강원대학교 중앙도서관 4층 데이터라이브러리</div>
             </div>
-            
+
             <p className={styles.cardDescription}>
-              실전 문제 풀이, 멘토링, 질의응답, 팀 활동 및 미니 CTF 대회가 
-              진행됩니다. 참가자 간 교류 및 멘토와의 직접적인 소통을 통해 
-              더 깊이 있는 학습이 가능합니다.
+              본 행사에 대한 오리엔테이션과 향후 교육 방법에 대한 소개 등이 진행됩니다.<br/>
+              참가자 간 교류 및 전문 강사와의 직접적인 소통을 통해 더 깊이 있는 학습이 가능합니다. <br/>
             </p>
           </motion.div>
+
+
+          <motion.div variants={fadeIn} className={styles.educationCard}>
+            <div className={styles.cardIcon}>
+              <FaLaptopCode />
+            </div>
+            <h3 className={styles.cardTitle}>온라인 교육</h3>
+            
+            <div className={styles.infoItem}>
+              <div className={styles.infoLabel}>기간</div>
+              <div className={styles.infoText}>2025년 7월 1일 ~ 7월 31일</div>
+            </div>
+            
+            <div className={styles.infoItem}>
+              <div className={styles.infoLabel}>방식</div>
+              <div className={styles.infoText}>온라인 플랫폼을 통한 자율 학습</div>
+            </div>
+
+            <p className={styles.cardDescription}>
+              CTF대회 문제를 풀기 위한  기본 지식과 문제 해결 능력을 기르기 위한 교육이 온라인 실시간 강의를 통해 제공됩니다.<br />
+              참가자는 강의 커리큘럼에 맞추어 학습하고, 교육 내용 중 궁금한 점이 있으시면 이메일 또는 기타 플랫폼을 통해 질의응답이 가능합니다.
+
+            </p>
+          </motion.div>
+
+
         </motion.div>
-        
+
         <motion.div 
           className={styles.topics}
           initial="hidden"
@@ -187,19 +190,25 @@ export default function Education() {
             <li className={styles.materialsItem}>
               <span className={styles.bullet}>•</span>
               <span className={styles.text}>
-                <strong>노트북</strong> - 개인 학습 및 실습을 위한 필수 준비물입니다.
+                <strong>노트북 또는 컴퓨터터</strong> - 개인 학습 및 실습을 위한 필수 준비물입니다.
               </span>
             </li>
             <li className={styles.materialsItem}>
               <span className={styles.bullet}>•</span>
               <span className={styles.text}>
-                <strong>신분증</strong> - 본인 확인을 위해 필요합니다.
+                <strong>신분증 또는 학생증</strong> - 본인 확인을 위해 필요합니다.
               </span>
             </li>
             <li className={styles.materialsItem}>
               <span className={styles.bullet}>•</span>
               <span className={styles.text}>
                 <strong>필기구</strong> - 필기가 필요한 경우를 대비해 준비하세요.
+              </span>
+            </li>
+            <li className={styles.materialsItem}>
+              <span className={styles.bullet}>•</span>
+              <span className={styles.text}>
+                <strong>개인식사</strong> - 오프라인 교육 시 점심 식사가 제공됩니다.
               </span>
             </li>
           </motion.ul>

@@ -298,21 +298,39 @@ $accent-hover: #2563eb;
       border-radius: 1px;
     }
   }
-  
   .benefitsList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr); // 3열로 변경
+    gap: 2rem; // 간격 늘림
+    
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
     
     .benefitItem {
       display: flex;
       align-items: flex-start;
+      background-color: rgba($dark-bg-secondary, 0.3); // 배경 추가
+      padding: 1.5rem; // 패딩 추가
+      border-radius: 0.5rem; // 라운드 처리
+      border: 1px solid rgba(255, 255, 255, 0.05); // 테두리 추가
+      transition: all 0.3s ease; // 트랜지션 추가
+      
+      &:hover {
+        transform: translateY(-5px); // 호버 효과
+        background-color: rgba($dark-bg-secondary, 0.5);
+      }
       
       .benefitIcon {
         color: $accent-primary;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-right: 1rem;
         margin-top: 0.125rem;
+        min-width: 1.5rem; // 아이콘 최소 너비 설정
       }
       
       .benefitText {
@@ -322,6 +340,9 @@ $accent-hover: #2563eb;
         
         strong {
           color: $dark-text-primary;
+          display: block; // 제목을 별도 줄에 표시
+          margin-bottom: 0.5rem; // 제목과 내용 사이 여백
+          font-size: 1.1rem; // 제목 크기 키움
         }
       }
     }

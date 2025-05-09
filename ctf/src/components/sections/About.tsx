@@ -79,7 +79,7 @@ export default function About() {
             
             <motion.p variants={fadeInLeft} className={styles.description}>
               강원권 중고교 해킹교육 & CTF 대회는 중고등학생들에게 사이버 보안의 중요성을 알리고, 
-              화이트 해커로서의 소양을 기르는 기회를 제공합니다. 본 대회는 참가자들이 실제 해킹 기술을 
+              화이트 해커로서의 소양을 기르는 기회를 제공합니다. <br/>본 대회는 참가자들이 실제 해킹 기술을 
               배우고 응용할 수 있는 기회를 제공하며, 인공지능, 웹, 암호, 시스템 등 다양한 분야의 문제를 
               해결하는 과정을 통해 문제 해결 능력과 사이버 보안에 대한 이해를 높일 수 있습니다.
             </motion.p>
@@ -97,7 +97,7 @@ export default function About() {
                 <FaTrophy className={styles.featureIcon} />
                 <h4 className={styles.featureTitle}>시상 내역</h4>
                 <p className={styles.featureText}>
-                  대상, 금상, 은상, 동상 등 다양한 상장과 상품이 수여
+                  대상, 최우수상, 우수상, 장려상 등 다양한 상장과 상금이 수여
                 </p>
               </div>
             </motion.div>
@@ -126,26 +126,28 @@ export default function About() {
             
             <motion.div variants={fadeInRight} className={styles.detailItem}>
               <div className={styles.icon}>
+                <FaTrophy />
+              </div>
+              <div className={styles.detailContent}>
+                <h4 className={styles.detailTitle}>팀 구성</h4>
+                <p className={styles.detailText}>
+                  - 3~4인으로 한팀 구성<br/>
+                  - 학교별 1팀, 선착순, 고학년 순으로 선정정
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeInRight} className={styles.detailItem}>
+              <div className={styles.icon}>
                 <FaUniversity />
               </div>
               <div className={styles.detailContent}>
                 <h4 className={styles.detailTitle}>진행 방식</h4>
                 <p className={styles.detailText}>
-                  대회는 사전교육과 본 대회로 구성됩니다. 사전교육에서는 인공지능, 웹, 암호, 시스템 등 다양한 분야의 
-                  기초 지식과 문제 해결 방법을 학습하고, 본 대회에서는 실전 문제 풀이를 통해 실력을 겨루게 됩니다.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div variants={fadeInRight} className={styles.detailItem}>
-              <div className={styles.icon}>
-                <FaTrophy />
-              </div>
-              <div className={styles.detailContent}>
-                <h4 className={styles.detailTitle}>추가 특전</h4>
-                <p className={styles.detailText}>
-                  최우수 수상자팀 이상 강원정보보호컨퍼런스 초청 및 참가자 전원 참가 증명서가 발급됩니다. 
-                  또한 우수 참가자에게는 향후 관련 프로그램 참여 기회가 우선적으로 제공됩니다.
+                  선발된 10개 팀은 사전교육을 거쳐 CTF 대회에 참가하게 됩니다.<br/>
+                  대회는 사전교육과 본 대회로 구성됩니다. <br/>
+                  사전교육에서는 인공지능, 웹, 암호, 시스템 등 다양한 분야의 
+                  지식과 문제 해결 방법을 학습하고, 본 대회에서는 CTF를 통해 실력을 겨루게 됩니다.
                 </p>
               </div>
             </motion.div>

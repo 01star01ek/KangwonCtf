@@ -44,7 +44,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={fadeIn} className={styles.description}>
-            중고등학생들을 위한 정보보안 교육 및 해킹방어대회에 여러분을 초대합니다.
+            중고등학생들을 위한 정보보안 교육 및 해킹방어대회에 여러분을 초대합니다.<br/>
             사이버 보안의 기초부터 실전까지, 미래의 화이트 해커를 위한 특별한 기회를 놓치지 마세요.
           </motion.p>
 
