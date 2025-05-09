@@ -94,7 +94,7 @@ export default function Faq() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            해킹교육 및 CTF 대회에 관한 자주 묻는 질문과 답변입니다.
+            해킹교육 및 CTF 대회에 관한 자주 묻는 질문과 답변입니다.<br/>
             아래에서 찾지 못한 질문이 있다면 문의처로 연락해 주세요.
           </motion.p>
         </div>

@@ -82,7 +82,7 @@ export default function Education() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            대회에 앞서 진행되는 사전교육을 통해 CTF 대회에 필요한 기본 지식과 
+            대회에 앞서 진행되는 사전교육을 통해 <br/>CTF 대회에 필요한 기본 지식과 
             문제 해결 능력을 기를 수 있습니다.
           </motion.p>
         </div>

@@ -59,7 +59,7 @@ export default function Competition() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            사전교육을 통해 학습한 내용을 바탕으로 본격적인 CTF 대회에 도전해 보세요.
+            사전교육을 통해 학습한 내용을 바탕으로 본격적인 CTF 대회에 도전해 보세요.<br/>
             다양한 분야의 문제를 해결하며 실력을 마음껏 발휘할 기회입니다.
           </motion.p>
         </div>
@@ -133,7 +133,7 @@ export default function Competition() {
               <div className={styles.infoContent}>
                 <div className={styles.infoLabel}>문제 유형</div>
                 <div className={styles.infoText}>
-                  인공지능, 웹, 암호, 시스템 등 다양한 분야의 문제가 출제됩니다.
+                  인공지능, 웹, 암호, 시스템 등 다양한 분야의 문제가 출제됩니다.<br/>
                   문제는 난이도별로 구성되어 있어 초보자부터 고급자까지 모두 도전할 수 있습니다.
                 </div>
               </div>

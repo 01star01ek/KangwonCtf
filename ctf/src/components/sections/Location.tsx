@@ -65,7 +65,7 @@ export default function Location() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            강원대학교 중앙도서관 4층 데이터라이브러리에서 열리는 행사에 참여하기 위한 교통 안내입니다.
+            강원대학교 중앙도서관 4층 데이터라이브러리에서 열리는 행사에<br/> 참여하기 위한 교통 안내입니다.
           </motion.p>
         </div>
 
