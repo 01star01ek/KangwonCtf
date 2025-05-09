@@ -9,10 +9,7 @@ import {
   FaLaptopCode,
   FaTrophy,
   FaMedal,
-  FaGraduationCap,
-  FaCertificate,
-  FaNetworkWired,
-  FaUsers
+  FaCertificate
 } from 'react-icons/fa';
 import styles from '@/styles/sections/competition.module.scss';
 

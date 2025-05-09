@@ -84,7 +84,7 @@ export default function Apply() {
               <div className={styles.period}>
                 <FaClipboardList className={styles.icon} />
                 <span className={styles.text}>
-                  <strong>신청 방법:</strong> 아래의 '신청하기' 버튼을 클릭하여 구글 폼 작성
+                  <strong>신청 방법:</strong> 아래의 &apos;신청하기&apos; 버튼을 클릭하여 구글 폼 작성
                 </span>
               </div>
               
