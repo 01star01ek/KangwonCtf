@@ -176,7 +176,7 @@ export default function Apply() {
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>구글 폼 작성 및 제출</h4>
                   <p className={styles.stepDescription}>
-                    '신청하기' 버튼을 클릭하여 구글 폼을 작성합니다. 기본 정보 입력 및 
+                  &apos;신청하기&apos; 버튼을 클릭하여 구글 폼을 작성합니다. 기본 정보 입력 및 
                     작성한 서류를 업로드하세요. 모든 정보는 정확하게 기재해 주시기 바랍니다.
                   </p>
                 </div>

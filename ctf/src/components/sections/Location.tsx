@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 import {
   FaMapMarkerAlt,
   FaBus,
-  FaSubway,
   FaTrain,
-  FaCar,
   FaExternalLinkAlt
 } from 'react-icons/fa';
 import styles from '@/styles/sections/location.module.scss';
