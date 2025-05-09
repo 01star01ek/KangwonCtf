@@ -103,43 +103,36 @@ export default function Apply() {
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    참가자 기본 정보 (이름, 소속 학교, 학년, 연락처, 이메일)
+                    개인정보 수집 이용 동의서
                   </span>
                 </li>
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    참가 동기 및 관심 분야
+                    참가 서약서
                   </span>
                 </li>
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    학부모 동의서 (양식 다운로드 후 작성하여 업로드)
+                    참가 신청서
                   </span>
                 </li>
                 <li className={styles.requiredItem}>
                   <span className={styles.bullet}>•</span>
                   <span className={styles.text}>
-                    참가서약서 (양식 다운로드 후 작성하여 업로드)
+                   학부모 동의서
                   </span>
                 </li>
               </ul>
               
               <div className={styles.formControls}>
                 <a
-                  href="/forms/parent-consent.pdf" 
+                  href="/application_forms.Zip"
                   className={`${styles.formBtn} ${styles.secondary}`}
                   download
                 >
-                  학부모 동의서 다운로드 <FaFileDownload style={{ marginLeft: '0.5rem', display: 'inline' }} />
-                </a>
-                <a
-                  href="/forms/participant-pledge.pdf"
-                  className={`${styles.formBtn} ${styles.secondary}`}
-                  download
-                >
-                  참가서약서 다운로드 <FaFileDownload style={{ marginLeft: '0.5rem', display: 'inline' }} />
+                  서류 양식 다운로드 <FaFileDownload style={{ marginLeft: '0.5rem', display: 'inline' }} />
                 </a>
                 <button 
                   className={styles.formBtn}
@@ -165,8 +158,8 @@ export default function Apply() {
                 <div className={styles.stepContent}>
                   <h4 className={styles.stepTitle}>서류 양식 다운로드</h4>
                   <p className={styles.stepDescription}>
-                    필요한 서류(학부모 동의서, 참가서약서)를 다운로드하여 작성합니다.<br/>
-                    각 서류는 서명이 필요하므로 출력 후 작성하거나 디지털 서명이 가능합니다.
+                    필요한 서류(총 ４종)를 다운로드하여 작성합니다.<br/>
+                    각 서류는 서명이 필요하므로 출력 후 작성하거나 서명 파일을 삽입해주세요.
                   </p>
                 </div>
               </motion.li>

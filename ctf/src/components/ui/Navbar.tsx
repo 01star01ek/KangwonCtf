@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '@/styles/components/navbar.module.scss';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Image from 'next/image';
 
 // 네비게이션 링크 정의
 const navLinks = [
@@ -62,11 +63,11 @@ export default function Navbar() {
     >
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link
-            to="hero"
-            spy={true}
-            smooth={true}
-            offset={-70}
+          <Link 
+            to="hero" 
+            spy={true} 
+            smooth={true} 
+            offset={-70} 
             duration={500}
             className={styles.logoLink}
           >
@@ -76,7 +77,7 @@ export default function Navbar() {
             </span>
           </Link>
         </div>
-
+        
         {/* 데스크탑 네비게이션 */}
         <nav className={styles.desktopNav}>
           <ul className={styles.navLinks}>
@@ -105,8 +106,20 @@ export default function Navbar() {
           >
             신청하기
           </Link>
+          
+          {/* 로고 추가 - 오른쪽에 */}
+          <div className={styles.universityLogo}>
+            <Image 
+              src="/KNU_logo.png"
+              alt="강원대학교 로고"
+              width={50}  
+              height={50}
+              className={styles.knuLogo}
+            />
+          </div>
         </nav>
-
+        
+        {/* 모바일 메뉴 버튼 */}
         <button
           className={styles.mobileMenuBtn}
           onClick={toggleMobileMenu}
@@ -118,60 +131,76 @@ export default function Navbar() {
             <FaBars size={24} color="#f8fafc" />
           )}
         </button>
-
-        {/* 모바일 메뉴 */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              className={styles.mobileMenu}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ul className={styles.mobileNavLinks}>
-                {navLinks.map((link) => (
-                  <motion.li
-                    key={link.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * navLinks.indexOf(link) }}
-                  >
-                    <Link
-                      to={link.id}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
-                      className={`${styles.mobileNavLink} ${activeSection === link.id ? styles.active : ''}`}
-                      onClick={closeMobileMenu}
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * navLinks.length }}
-              >
-                <Link
-                  to="apply"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className={styles.mobileCta}
-                  onClick={closeMobileMenu}
-                >
-                  신청하기
-                </Link>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
+      
+      {/* 모바일 메뉴 */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className={styles.mobileMenu}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className={styles.mobileNavLinks}>
+              {navLinks.map((link) => (
+                <motion.li 
+                  key={link.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * navLinks.indexOf(link) }}
+                >
+                  <Link
+                    to={link.id}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className={`${styles.mobileNavLink} ${activeSection === link.id ? styles.active : ''}`}
+                    onClick={closeMobileMenu}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * navLinks.length }}
+            >
+              <Link
+                to="apply"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className={styles.mobileCta}
+                onClick={closeMobileMenu}
+              >
+                신청하기
+              </Link>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className={styles.mobileLogoContainer}
+            >
+              <Image 
+                src="/KNU_logo.png"
+                alt="강원대학교 로고"
+                width={60}  
+                height={60}
+                className={styles.knuLogo}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

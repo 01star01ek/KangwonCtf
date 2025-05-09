@@ -44,22 +44,22 @@ export default function Education() {
     {
       icon: <FaBrain />,
       title: '인공지능',
-      description: '머신러닝 모델 취약점, 데이터 분석, AI 모델 활용 기법 등의 보안 관련 주제를 다룹니다.'
+      description: '인공지능의 원리와 활용법을 소개하고 기본 개념을 익힌다.'
     },
     {
       icon: <FaGlobe />,
       title: '웹',
-      description: 'SQL 인젝션, XSS, CSRF, 인증 우회, 웹 취약점 분석 등 웹 해킹 기술을 배웁니다.'
+      description: '웹 보안의 주요 이슈를 소개하고 기본적인 대응 방법을 익힌다.'
     },
     {
       icon: <FaLock />,
       title: '암호',
-      description: '고전 암호, 현대 암호, 해시 함수, 암호 분석 기법 등 암호학 기초를 학습합니다.'
+      description: '정보 보호를 위한 암호 기술을 소개하고 기초 이론을 익힌다.'
     },
     {
       icon: <FaServer />,
       title: '시스템',
-      description: '버퍼 오버플로우, 쉘코드 작성, 리버스 엔지니어링 기초 등을 배웁니다.'
+      description: '시스템 구조와 보안 기법을 소개하며 실습을 통해 익힌다.'
     }
   ];
   
@@ -190,7 +190,7 @@ export default function Education() {
             <li className={styles.materialsItem}>
               <span className={styles.bullet}>•</span>
               <span className={styles.text}>
-                <strong>노트북 또는 컴퓨터터</strong> - 개인 학습 및 실습을 위한 필수 준비물입니다.
+                <strong>노트북 또는 컴퓨터</strong> - 개인 학습 및 실습을 위한 필수 준비물입니다.
               </span>
             </li>
             <li className={styles.materialsItem}>

@@ -122,8 +122,8 @@ export default function Competition() {
               <div className={styles.infoContent}>
                 <div className={styles.infoLabel}>대회 형식</div>
                 <div className={styles.infoText}>
-                  개인 참가 방식의 CTF(Capture The Flag) 대회로, 다양한 보안 문제를 해결하여
-                  점수를 획득하는 방식입니다.
+                  개인 참가 방식의 CTF(Capture The Flag) 대회로,<br/>
+                  다양한 보안 문제를 해결하여 점수를 획득하는 방식입니다.
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function Competition() {
               <div className={styles.infoContent}>
                 <div className={styles.infoLabel}>준비물</div>
                 <div className={styles.infoText}>
-                  개인 노트북(권장), 신분증, 필기도구
+                  개인 노트북(필요 시), 신분증 또는 학생증, 필기도구(필요 시)
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.awardCard}>
               <FaMedal className={`${styles.awardIcon} ${styles.gold}`} />
               <h4 className={styles.awardTitle}>최우수상</h4>
-              <p className={styles.awardSubtitle}>KISA원장상 예정</p>
+              <p className={styles.awardSubtitle}>한국인터넷진흥원장상</p>
               <p className={styles.awardPrize}>1,000,000원</p>
               <p className={styles.awardNote}>중등부/고등부 각 1팀</p>
             </motion.div>
@@ -183,7 +183,7 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.awardCard}>
               <FaMedal className={`${styles.awardIcon} ${styles.silver}`} />
               <h4 className={styles.awardTitle}>우수상</h4>
-              <p className={styles.awardSubtitle}>미정</p>
+              <p className={styles.awardSubtitle}>IT 대학장상</p>
               <p className={styles.awardPrize}>800,000원</p>
               <p className={styles.awardNote}>중등부/고등부 각 2팀</p>
             </motion.div>
@@ -191,7 +191,8 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.awardCard}>
               <FaMedal className={`${styles.awardIcon} ${styles.bronze}`} />
               <h4 className={styles.awardTitle}>장려상</h4>
-              <p className={styles.awardSubtitle}>정보보호특성화대학지원사업단장상</p>
+              <p className={styles.awardSubtitle}>정보보호특성화대학
+                지원사업단장상</p>
               <p className={styles.awardPrize}>400,000원</p>
               <p className={styles.awardNote}>3팀</p>
             </motion.div>

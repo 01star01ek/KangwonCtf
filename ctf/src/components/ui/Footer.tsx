@@ -33,16 +33,17 @@ export default function Footer() {
 
           <div className={styles.footerInfo}>
             <h3>주최</h3>
-            <p>강원대학교, 강원특별자치도청, 한국인터넷진흥원, 강원정보보호지원센터
-            </p>
+            <p>강원대학교, 강원특별자치도청, 한국인터넷진흥원 공동 주최</p>
             <h3>주관</h3>
-            <p>본 행사는 강원대학교, 강원특별자치도청, 한국인터넷진흥원, 강원정보보호지원센터가 공동 주최하는 행사로, 강원도내 중고교 생들의 정보보안 역량 강화 및 미래인재 발굴을 목표로 합니다.</p>
+            <p>강원대학교(정보보호특성화대학지원사업단, 융합보안대학원)</p>
+            <h3>협조</h3>
+            <p>국가정보원, 강원도교육청</p>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            &copy; {currentYear} 2025 강원권 중.고교 해킹 교육 & CTF 대회
+            &copy; {currentYear} 강원권 중고교 해킹 교육 & CTF 대회
           </div>
 
         </div>
