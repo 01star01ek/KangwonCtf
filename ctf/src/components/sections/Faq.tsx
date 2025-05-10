@@ -9,7 +9,7 @@ import styles from '@/styles/sections/faq.module.scss';
 const faqData = [
   {
     question: '참가 비용이 있나요?',
-    answer: '아니요, 본 대회는 무료로 참가 가능합니다.\n단, 대회 장소까지의 교통비는 개인 부담입니다.'
+    answer: '아니요, 본 대회는 무료로 참가 가능합니다.'
   },
   {
     question: '개인으로 참가할 수 있나요?',

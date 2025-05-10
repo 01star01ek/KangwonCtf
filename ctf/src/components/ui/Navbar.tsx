@@ -112,8 +112,8 @@ export default function Navbar() {
             <Image 
               src="/KNU_logo.png"
               alt="강원대학교 로고"
-              width={50}  
-              height={50}
+              width={80}  
+              height={80}
               className={styles.knuLogo}
             />
           </div>
