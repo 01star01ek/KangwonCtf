@@ -3,15 +3,12 @@
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaChevronRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 import { IoMdClose } from 'react-icons/io';
 import styles from '@/styles/sections/apply.module.scss';
 
 export default function Apply() {
   const googleFormUrl = "https://forms.gle/XC97q3dGFBi64jPr5";
-  
-  // 모달 상태 관리
-  const [showForm, setShowForm] = useState(false);
   
   // 애니메이션을 위한 InView Hook
   const [ref, inView] = useInView({
@@ -37,6 +34,11 @@ export default function Apply() {
         staggerChildren: 0.2
       }
     }
+  };
+  
+  // 구글 폼 열기 함수
+  const openGoogleForm = () => {
+    window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
   };
   
   return (
@@ -135,9 +137,9 @@ export default function Apply() {
                 </a>
                 <button 
                   className={styles.formBtn}
-                  onClick={() => setShowForm(true)}
+                  onClick={openGoogleForm}
                 >
-                  신청하기 <FaChevronRight style={{ marginLeft: '0.5rem', display: 'inline' }} />
+                  신청하기 <FaExternalLinkAlt style={{ marginLeft: '0.5rem', display: 'inline' }} />
                 </button>
               </div>
             </div>
@@ -200,33 +202,6 @@ export default function Apply() {
           </motion.div>
         </div>
       </div>
-      
-      {/* 구글 폼 모달 */}
-      {showForm && (
-        <div className={styles.modal}>
-          <div className={styles.modalContent}>
-            <div className={styles.modalHeader}>
-              <h3 className={styles.modalTitle}>참가 신청서</h3>
-              <button 
-                className={styles.closeBtn} 
-                onClick={() => setShowForm(false)}
-                aria-label="닫기"
-              >
-                <IoMdClose />
-              </button>
-            </div>
-            <div className={styles.modalBody}>
-              <iframe 
-                src={googleFormUrl} 
-                className={styles.iframe} 
-                title="참가 신청 폼"
-              >
-                로딩중...
-              </iframe>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
