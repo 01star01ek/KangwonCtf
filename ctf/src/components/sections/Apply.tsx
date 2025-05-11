@@ -1,10 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
-import { IoMdClose } from 'react-icons/io';
 import styles from '@/styles/sections/apply.module.scss';
 
 export default function Apply() {
