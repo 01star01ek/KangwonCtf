@@ -8,8 +8,7 @@ import { IoMdClose } from 'react-icons/io';
 import styles from '@/styles/sections/apply.module.scss';
 
 export default function Apply() {
-  // 구글 폼 URL (실제 구글 폼 URL로 대체 필요)
-  const googleFormUrl = "https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true";
+  const googleFormUrl = "https://forms.gle/XC97q3dGFBi64jPr5";
   
   // 모달 상태 관리
   const [showForm, setShowForm] = useState(false);

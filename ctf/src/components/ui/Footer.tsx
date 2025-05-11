@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.icon} />
-                <span>강원대학길 1, 공학6호관 604호&apos;빅데이터-융합보안사업단&apos;</span>
+                <span>강원특별자치도 춘천시 강원대학길 1, 공학6호관 604호&apos;빅데이터-융합보안사업단&apos;</span>
               </div>
             </div>
           </div>
