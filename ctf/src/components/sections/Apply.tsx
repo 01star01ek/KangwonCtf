@@ -2,7 +2,7 @@
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaClipboardList, FaUserPlus, FaFileDownload, FaExternalLinkAlt } from 'react-icons/fa';
 import styles from '@/styles/sections/apply.module.scss';
 
 export default function Apply() {
