@@ -183,7 +183,7 @@ export default function Competition() {
             <motion.div variants={fadeIn} className={styles.awardCard}>
               <FaMedal className={`${styles.awardIcon} ${styles.silver}`} />
               <h4 className={styles.awardTitle}>우수상</h4>
-              <p className={styles.awardSubtitle}>IT 대학장상</p>
+              <p className={styles.awardSubtitle}>강원대학교 IT 대학장상</p>
               <p className={styles.awardPrize}>800,000원</p>
               <p className={styles.awardNote}>중등부/고등부 각 2팀</p>
             </motion.div>

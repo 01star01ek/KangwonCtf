@@ -132,7 +132,7 @@ export default function About() {
                 <h4 className={styles.detailTitle}>팀 구성</h4>
                 <p className={styles.detailText}>
                   - 3~4인으로 한팀 구성<br/>
-                  - 학교별 1팀, 선착순, 고학년 순으로 선정정
+                  - 학교별 1팀, 선착순, 고학년 순으로 선정
                 </p>
               </div>
             </motion.div>
