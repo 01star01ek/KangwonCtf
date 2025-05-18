@@ -1,0 +1,200 @@
+/* 팝업 오버레이 */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  padding: 1rem;
+}
+
+/* 팝업 컨테이너 */
+.popupContainer {
+  position: relative;
+  width: 80%;
+  max-width: 450px;
+  background-color: #1e293b;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.4s ease;
+}
+
+/* 닫기 버튼 */
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 팝업 컨텐츠 */
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;;
+}
+
+/* 이미지 관련 */
+.popupImageWrapper {
+    position: relative;
+    padding-bottom : 90.33%;
+    /* 16:9 비율 */
+    overflow: hidden;
+    padding-top: 1rem;
+    max-height: 70vh;
+}
+.popupImage {
+  object-fit: contain;
+}
+
+/* 팝업 액션 영역 */
+.popupActions {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CTA 버튼 */
+.ctaButton {
+  width: 100%;
+  padding: 0.8rem 0.8rem;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+/* 체크박스 컨테이너 */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkboxLabel {
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .popupContainer {
+    max-width: 100%;
+    border-radius: 0.75rem;
+    margin: 0 0.5rem;
+  }
+  
+  .popupImageWrapper {
+    padding-bottom: 66.67%; /* 3:2 비율 (모바일에서 더 큰 이미지) */
+  }
+  
+  .popupActions {
+    padding: 1.25rem;
+  }
+  
+  .ctaButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popupOverlay {
+    align-items: flex-end; /* 모바일에서는 화면 하단에 표시 */
+    padding: 0;
+  }
+  
+  .popupContainer {
+    border-radius: 1rem 1rem 0 0; /* 하단 모서리는 직각으로 */
+    max-height: 90vh; /* 화면 높이의 90%로 제한 */
+    overflow-y: auto; /* 내용이 많으면 스크롤 가능하게 */
+  }
+  
+  .popupImageWrapper {
+    padding-bottom: 75%; /* 4:3 비율 (더 작은 화면에서 더 큰 이미지) */
+  }
+  
+  .closeButton {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .popupContainer {
+    background-color: #1e293b;
+  }
+  
+  .closeButton {
+    color: #f8fafc;
+  }
+  
+  .ctaButton {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  }
+  
+  .checkboxLabel {
+    color: #cbd5e1;
+  }
+}
