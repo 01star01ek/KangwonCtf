@@ -160,7 +160,7 @@
 
 @media (max-width: 480px) {
   .popupOverlay {
-    align-items: flex-end; /* 모바일에서는 화면 하단에 표시 */
+    align-items: center; /* 모바일에서는 화면 하단에 표시 */
     padding: 0;
   }
   
