@@ -102,7 +102,7 @@ export default function Education() {
             
             <div className={styles.infoItem}>
               <div className={styles.infoLabel}>일시</div>
-              <div className={styles.infoText}>2025년 7월 7일 (토) 10:00 ~ 17:00</div>
+              <div className={styles.infoText}>7월 중 진행 예정</div>
             </div>
             
             <div className={styles.infoItem}>
@@ -215,7 +215,7 @@ export default function Education() {
           
           <motion.div variants={fadeIn} className={styles.materialsNote}>
             <p className={styles.noteText}>
-              <strong>중요 안내:</strong> 오프라인 교육(7월 7일)은 필수 참석입니다. 
+              <strong>중요 안내:</strong> 오프라인 교육은 필수 참석입니다. 
               부득이한 사정으로 참석이 어려운 경우, 사전에 운영진에게 연락해 주시기 바랍니다.
             </p>
           </motion.div>
