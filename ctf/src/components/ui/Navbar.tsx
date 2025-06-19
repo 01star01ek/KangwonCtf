@@ -8,9 +8,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 
 // 네비게이션 링크 정의
+// src/components/ui/Navbar.tsx - 네비게이션 링크에 공지사항 추가
 const navLinks = [
   { id: 'hero', name: '홈' },
   { id: 'about', name: '대회 소개' },
+  { id: 'notice', name: '공지사항' }, // 추가
   { id: 'apply', name: '신청 안내' },
   { id: 'education', name: '사전교육 안내' },
   { id: 'competition', name: '대회 안내' },

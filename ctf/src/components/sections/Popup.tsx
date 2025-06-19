@@ -54,7 +54,7 @@ export default function Popup() {
 
   const scrollToApply = () => {
     closePopup();
-    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('notice')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (!isOpen) return null;
@@ -73,7 +73,7 @@ export default function Popup() {
         <div className={styles.popupContent}>
           <div className={styles.popupImageWrapper}>
             <Image 
-              src="/poster.png" 
+              src="/notice.png" 
               alt="강원권 중고교 해킹교육 & CTF 대회 안내" 
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -87,7 +87,7 @@ export default function Popup() {
               className={styles.ctaButton}
               onClick={scrollToApply}
             >
-              참가 신청하기
+              공지 확인하기
             </button>
             
             <div className={styles.checkboxContainer}>
